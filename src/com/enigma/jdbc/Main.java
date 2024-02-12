@@ -29,9 +29,9 @@ public class Main {
 //        System.out.println(delete);
 
 
-//        Menu menu2 = menuRepository.findByName("Batagor");
-//        System.out.println(menu2.getId());
-//        System.out.println(menu2.getName());
+        Menu menu2 = menuRepository.findByName("%Batagor%");
+        System.out.println(menu2.getId());
+        System.out.println(menu2.getName());
 
 
     }

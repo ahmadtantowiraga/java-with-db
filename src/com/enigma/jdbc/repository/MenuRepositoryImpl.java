@@ -108,7 +108,7 @@ public class MenuRepositoryImpl implements MenuRepository {
     @Override
     public Menu findByName(String name) {
         try (Connection con = DBConnector.getConnection()) {
-            String sql="SELECT id, menu_name FROM m_menu WHERE menu_name = ?";
+            String sql="SELECT id, menu_name FROM m_menu WHERE menu_name LIKE ?";
             PreparedStatement statement=con.prepareStatement(sql);
             statement.setString(1,name);
             ResultSet resultSet=statement.executeQuery();
