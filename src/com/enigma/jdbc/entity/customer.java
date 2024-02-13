@@ -4,9 +4,9 @@ public class customer {
     private Integer id;
     private String name;
     private String phone;
-    private boolean member;
+    private Boolean member;
 
-    public customer(Integer id, String name, String phone, boolean member) {
+    public customer(Integer id, String name, String phone, Boolean member) {
         this.id = id;
         this.name = name;
         this.phone = phone;
