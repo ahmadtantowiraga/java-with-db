@@ -19,11 +19,13 @@ public class CustomerRepositoryImpl implements CustomerRepository{
             while(resultSet1.next()){
                 seq=resultSet1.getLong("id");
             }
+            System.out.println(seq);
             statement1.close();
 
-            String sql2="Alter sequence m_customer_seq restart with "+seq+1;
+            String sql2="Alter sequence m_customer_seq restart with "+(seq+1);
             PreparedStatement statement2=con.prepareStatement((sql2));
-//            statement2.setLong(1, seq+1);
+//            statement2.setLong(1, (seq+1));
+            System.out.println(statement2);
             statement2.executeUpdate();
             statement2.close();
 

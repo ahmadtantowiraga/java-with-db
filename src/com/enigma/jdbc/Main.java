@@ -1,10 +1,9 @@
 package com.enigma.jdbc;
 
+import com.enigma.jdbc.dto.MenuDetailRequest;
+import com.enigma.jdbc.dto.MenuDetailResponse;
 import com.enigma.jdbc.entity.Menu;
-import com.enigma.jdbc.repository.CustomerRepository;
-import com.enigma.jdbc.repository.CustomerRepositoryImpl;
-import com.enigma.jdbc.repository.MenuRepository;
-import com.enigma.jdbc.repository.MenuRepositoryImpl;
+import com.enigma.jdbc.repository.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,8 +33,18 @@ public class Main {
 //        Menu menu2 = menuRepository.findByName("%Batagor%");
 //        System.out.println(menu2.getId());
 //        System.out.println(menu2.getName());
-        CustomerRepository cust=new CustomerRepositoryImpl();
-        int save=cust.save("uciha1","09876543211",true);
+
+
+//        CustomerRepository cust=new CustomerRepositoryImpl();
+//        int save=cust.save("uciha1","09876543211",true);
+
+
+//        MenuDetailRequest menuDetailRequest=new MenuDetailRequest("cicil", 10000F);
+
+        MenuPriceRepository menuPriceRepository=new MenuPriceRepositoryImpl();
+//        menuPriceRepository.save(menuDetailRequest);
+        String a=menuPriceRepository.findByMenuId(2).getName();
+        System.out.println(a);
 
 
 
